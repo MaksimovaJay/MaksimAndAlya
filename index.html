@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="section1.css" />
   <link rel="stylesheet" href="section2.css" />
   <link rel="stylesheet" href="section3.css" />
+  <link rel="stylesheet" href="section4.css" />
+  <link rel="stylesheet" href="section5.css" />
+  <link rel="stylesheet" href="section6.css" />
+  <link rel="stylesheet" href="section7.css" />
 </head>
 <body>
 
@@ -152,28 +156,261 @@
 
       <!-- Заголовок -->
       <div class="venue__top fade-in">
-        <span class="venue__label">Где нас найти</span>
         <h2 class="venue__title">Место<br>проведения</h2>
-        <img class="venue__divider" src="image/section_1/line.png" alt="" aria-hidden="true" />
       </div>
 
-      <!-- Адрес и кнопка -->
-      <div class="venue__bottom fade-in">
+      <!-- Weg + адрес + кнопки -->
+      <div class="venue__left fade-in">
+        <img class="venue__weg" src="image/section_3/Weg.png" alt="" aria-hidden="true" />
         <p class="venue__address">
           г. Бишкек<br>
           Хижина дяди Тома<br>
           Центр отдыха
         </p>
-        <a href="https://2gis.kg/bishkek/geo/70000001030399315"
-           target="_blank" rel="noopener"
-           class="venue__btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-          </svg>
-          Открыть маршрут
-        </a>
+        <div class="venue__btns">
+          <a href="https://2gis.kg/bishkek/geo/70000001030399315"
+             target="_blank" rel="noopener"
+             class="venue__btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            2GIS
+          </a>
+          <a href="https://maps.app.goo.gl/b4TFQURiKHv6qHCz5"
+             target="_blank" rel="noopener"
+             class="venue__btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            Google Maps
+          </a>
+        </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SECTION 4 — ПРОГРАММА ДНЯ
+  ══════════════════════════════ -->
+  <section class="program" id="program">
+    <div class="program__inner">
+
+      <div class="program__header fade-in">
+        <h2 class="program__title">Программа дня</h2>
+        <img class="program__divider" src="image/section_1/line.png" alt="" aria-hidden="true" />
+      </div>
+
+      <div class="program__timeline fade-in">
+
+        <!-- 16:00 Велком -->
+        <div class="program__item">
+          <div class="program__icon">
+            <svg viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+              <path d="M5 3h14L16 15c-1 3-2.5 4.5-4 5.5V30"/>
+              <path d="M9 30h6"/>
+              <path d="M5 3c-1 5 1 9 3 12"/>
+              <path d="M19 3c1 5-1 9-3 12"/>
+            </svg>
+          </div>
+          <div class="program__node"></div>
+          <div class="program__content">
+            <p class="program__time">16:00</p>
+            <p class="program__name">Welcome</p>
+            <p class="program__desc">(встречаем гостей)</p>
+          </div>
+        </div>
+
+        <!-- 17:00 Церемония -->
+        <div class="program__item">
+          <div class="program__icon">
+            <svg viewBox="0 0 36 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+              <circle cx="13" cy="12" r="8"/>
+              <circle cx="23" cy="12" r="8"/>
+            </svg>
+          </div>
+          <div class="program__node"></div>
+          <div class="program__content">
+            <p class="program__time">17:00</p>
+            <p class="program__name">Церемония</p>
+            <p class="program__desc">(официальная часть)</p>
+          </div>
+        </div>
+
+        <!-- 17:30 Банкет -->
+        <div class="program__item">
+          <div class="program__icon">
+            <svg viewBox="0 0 36 28" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+              <path d="M18 4 C8 4 4 12 4 18h28c0-6-4-14-14-14z"/>
+              <line x1="2" y1="18" x2="34" y2="18"/>
+              <line x1="18" y1="2" x2="18" y2="5"/>
+              <line x1="10" y1="22" x2="26" y2="22"/>
+            </svg>
+          </div>
+          <div class="program__node"></div>
+          <div class="program__content">
+            <p class="program__time">17:30</p>
+            <p class="program__name">Банкет</p>
+            <p class="program__desc">(праздничный ужин и веселье)</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SECTION 5 — ДРЕСС-КОД
+  ══════════════════════════════ -->
+  <section class="dresscode" id="dresscode">
+    <div class="dresscode__inner fade-in">
+
+      <h2 class="dresscode__title">Дресс-код<br>Средиземья</h2>
+      <img class="dresscode__divider" src="image/section_1/line.png" alt="" aria-hidden="true" />
+
+      <p class="dresscode__text">
+        Мы очень старались сделать праздник красивым и будем рады,
+        если в своих нарядах вы поддержите атмосферу нашей свадьбы.
+      </p>
+
+      <img class="dresscode__divider" src="image/section_1/line.png" alt="" aria-hidden="true" />
+
+      <!-- Два варианта -->
+      <div class="dresscode__options">
+        <div class="dresscode__option">
+          <div class="dresscode__option-icon">
+            <svg viewBox="0 0 48 56" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 4 C16 10 8 18 10 30 C12 40 18 48 24 52 C30 48 36 40 38 30 C40 18 32 10 24 4Z"/>
+              <path d="M24 4 L24 52"/>
+              <path d="M10 30 C16 26 20 28 24 32 C28 28 32 26 38 30"/>
+              <path d="M14 18 C18 16 22 20 24 22 C26 20 30 16 34 18"/>
+            </svg>
+          </div>
+          <span class="dresscode__option-label">Природные<br>оттенки</span>
+        </div>
+        <div class="dresscode__option">
+          <div class="dresscode__option-icon">
+            <svg viewBox="0 0 44 56" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="22" cy="12" rx="8" ry="10"/>
+              <path d="M10 28 C10 22 14 20 22 20 C30 20 34 22 34 28 L36 52 H8 L10 28Z"/>
+              <path d="M8 34 L4 30 L8 28"/>
+              <path d="M36 34 L40 30 L36 28"/>
+              <path d="M14 36 L14 48 M22 36 L22 48 M30 36 L30 48"/>
+            </svg>
+          </div>
+          <span class="dresscode__option-label">Тематические<br>образы</span>
+        </div>
+      </div>
+
+      <a href="#palette" class="dresscode__btn">Смотреть примеры образов</a>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SECTION 6 — ЦВЕТА СРЕДИЗЕМЬЯ
+  ══════════════════════════════ -->
+  <section class="palette" id="palette">
+    <div class="palette__inner fade-in">
+
+      <p class="palette__text">
+        Эльфы, рыцари, крестьяне, гномы, волшебники,
+        феи, фавны, хоббиты, назгулы, лесные духи,
+        хоть в кентавра)!
+      </p>
+
+      <img class="palette__divider" src="image/section_1/line.png" alt="" aria-hidden="true" />
+
+      <p class="palette__text">
+        Если у вас нет возможности придумать костюм —
+        используйте природные оттенки: зелёные,
+        коричневые, золотые, природные.
+      </p>
+
+      <div class="palette__colors">
+        <div class="palette__row">
+          <div class="palette__swatch swatch--1"></div>
+          <div class="palette__swatch swatch--2"></div>
+          <div class="palette__swatch swatch--3"></div>
+        </div>
+        <div class="palette__row">
+          <div class="palette__swatch swatch--4"></div>
+          <div class="palette__swatch swatch--5"></div>
+          <div class="palette__swatch swatch--6"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SECTION 7 — ПРИМЕРЫ ОБРАЗОВ
+  ══════════════════════════════ -->
+  <section class="looks" id="looks">
+    <div class="looks__inner">
+
+      <div class="looks__header fade-in">
+        <h2 class="looks__title">Примеры образов</h2>
+        <img class="looks__divider" src="image/section_1/line.png" alt="" aria-hidden="true" />
+      </div>
+
+      <div class="looks__grid fade-in">
+
+        <div class="looks__card">
+          <div class="looks__placeholder">
+            <div class="looks__placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </div>
+          </div>
+          <span class="looks__label">Следопыт</span>
+        </div>
+
+        <div class="looks__card">
+          <div class="looks__placeholder">
+            <div class="looks__placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </div>
+          </div>
+          <span class="looks__label">Лесная эльфийка</span>
+        </div>
+
+        <div class="looks__card">
+          <div class="looks__placeholder">
+            <div class="looks__placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </div>
+          </div>
+          <span class="looks__label">Лесная фея</span>
+        </div>
+
+        <div class="looks__card">
+          <div class="looks__placeholder">
+            <div class="looks__placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </div>
+          </div>
+          <span class="looks__label">Хоббит</span>
+        </div>
+
+        <div class="looks__card">
+          <div class="looks__placeholder">
+            <div class="looks__placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </div>
+          </div>
+          <span class="looks__label">Рыцарь</span>
+        </div>
+
+        <div class="looks__card">
+          <div class="looks__placeholder">
+            <div class="looks__placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </div>
+          </div>
+          <span class="looks__label">Волшебник</span>
+        </div>
+
+      </div>
     </div>
   </section>
 

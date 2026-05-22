@@ -20,40 +20,31 @@
   }
 }
 
-/* ── Контейнер — растягивается, чтобы занять весь фон ── */
+/* ── Контейнер ── */
 .venue__inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  max-width: 560px;
-  padding: 64px 24px 80px;
+  max-width: 1100px;
+  padding: 100px 0 80px 0;
 }
 
 @media (max-width: 768px) {
   .venue__inner {
-    padding: 52px 24px 64px;
+    align-items: center;
+    padding: 100px 24px 64px;
   }
 }
 
-/* ── Верхний блок: заголовок ── */
+/* ── Заголовок — всегда по центру ── */
 .venue__top {
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
   text-align: center;
-}
-
-.venue__label {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--gold);
-  opacity: 0.85;
 }
 
 .venue__title {
@@ -67,20 +58,34 @@
   text-align: center;
 }
 
-.venue__divider {
-  width: clamp(100px, 35%, 200px);
-  opacity: 0.55;
-}
-
-/* ── Нижний блок: адрес + кнопка ── */
-.venue__bottom {
+/* ── Левый блок: Weg + адрес + кнопки ── */
+.venue__left {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
-  text-align: center;
 }
 
+@media (max-width: 768px) {
+  .venue__left {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ── Картинка тропинки ── */
+.venue__weg {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .venue__weg {
+    display: block;
+    width: min(340px, 85vw);
+  }
+}
+
+/* ── Адрес ── */
 .venue__address {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(17px, 3.5vw, 22px);
@@ -91,7 +96,25 @@
   letter-spacing: 0.02em;
 }
 
-/* ── Кнопка маршрута ── */
+@media (max-width: 768px) {
+  .venue__address {
+    text-align: center;
+  }
+}
+
+/* ── Кнопки маршрута ── */
+.venue__btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .venue__btns {
+    justify-content: center;
+  }
+}
+
 .venue__btn {
   display: inline-flex;
   align-items: center;

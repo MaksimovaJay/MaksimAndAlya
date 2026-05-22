@@ -1,0 +1,115 @@
+/* ════════════════════════════════════════
+   SECTION 5 — ДРЕСС-КОД СРЕДИЗЕМЬЯ
+════════════════════════════════════════ */
+
+.dresscode {
+  position: relative;
+  background-image: url('image/section_5/background_for_the_dekstop_version5.png');
+  background-size: cover;
+  background-position: center top;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px 100px;
+}
+
+/* ── Контейнер ── */
+.dresscode__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  gap: 28px;
+  text-align: center;
+}
+
+/* ── Заголовок ── */
+.dresscode__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 7vw, 50px);
+  font-weight: 700;
+  color: var(--brown);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.dresscode__divider {
+  width: clamp(100px, 35%, 200px);
+  opacity: 0.55;
+}
+
+/* ── Текст ── */
+.dresscode__text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 3.2vw, 20px);
+  font-weight: 500;
+  color: var(--brown-dark);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Два варианта ── */
+.dresscode__options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.dresscode__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.dresscode__option-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brown);
+  opacity: 0.8;
+}
+
+.dresscode__option-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dresscode__option-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(13px, 2.5vw, 16px);
+  font-weight: 600;
+  color: var(--brown);
+  letter-spacing: 0.06em;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ── Кнопка ── */
+.dresscode__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--forest);
+  color: var(--parchment);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid rgba(176, 138, 74, 0.3);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dresscode__btn:hover {
+  background: var(--forest2);
+  border-color: rgba(176, 138, 74, 0.65);
+  box-shadow: 0 0 18px var(--glow-gold);
+}

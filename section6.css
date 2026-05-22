@@ -1,0 +1,82 @@
+/* ════════════════════════════════════════
+   SECTION 6 — ЦВЕТА СРЕДИЗЕМЬЯ
+════════════════════════════════════════ */
+
+.palette {
+  position: relative;
+  background-image: url('image/section_6/background_for_the_dekstop_version6.png');
+  background-size: cover;
+  background-position: center top;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px 100px;
+}
+
+@media (max-width: 768px) {
+  .palette {
+    background-image: url('image/section_6/background_for_the_mobile_version6.png');
+  }
+}
+
+/* ── Контейнер ── */
+.palette__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 440px;
+  gap: 28px;
+  text-align: center;
+}
+
+/* ── Текст ── */
+.palette__text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 3.5vw, 20px);
+  font-weight: 500;
+  color: var(--brown);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.palette__divider {
+  width: clamp(100px, 35%, 200px);
+  opacity: 0.55;
+}
+
+/* ── Кружки цветов ── */
+.palette__colors {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.palette__row {
+  display: flex;
+  gap: 16px;
+}
+
+.palette__swatch {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .palette__swatch {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Цвета — природная палитра Средиземья */
+.swatch--1 { background: #3D4A1E; }
+.swatch--2 { background: #7A5035; }
+.swatch--3 { background: #8B4A2E; }
+.swatch--4 { background: #1E2A12; }
+.swatch--5 { background: #C4A96A; }
+.swatch--6 { background: #E8DEC0; }
