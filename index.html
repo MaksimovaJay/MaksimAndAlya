@@ -12,9 +12,57 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar.css" />
   <link rel="stylesheet" href="section1.css" />
 </head>
 <body>
+
+  <!-- ══════════════════════════════
+       NAVBAR
+  ══════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <!-- Логотип -->
+      <a href="#hero" class="navbar__logo">
+        <img src="image/section_1/logoUp.png" alt="М&А" />
+      </a>
+
+      <!-- Навигация -->
+      <ul class="navbar__nav">
+        <li><a href="#invitation" class="navbar__link">Приглашение</a></li>
+        <li><a href="#details" class="navbar__link">Детали</a></li>
+        <li><a href="#program" class="navbar__link">Программа</a></li>
+        <li><a href="#dresscode" class="navbar__link">Дресс-код</a></li>
+        <li><a href="#faq" class="navbar__link">FAQ</a></li>
+        <li><a href="#rsvp" class="navbar__link navbar__link--accent">RSVP</a></li>
+      </ul>
+
+      <!-- Монограмма + бургер -->
+      <div class="navbar__right">
+        <div class="navbar__monogram">
+          М <span class="navbar__mono-amp">&amp;</span> А
+        </div>
+        <button class="navbar__toggle" id="navToggle" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- Мобайл оверлей — вне <nav>, иначе position:fixed ломается -->
+  <div class="navbar__overlay" id="navOverlay">
+    <ul class="navbar__overlay-nav">
+      <li><a href="#invitation" class="navbar__overlay-link">Приглашение</a></li>
+      <li><a href="#details" class="navbar__overlay-link">Детали</a></li>
+      <li><a href="#program" class="navbar__overlay-link">Программа</a></li>
+      <li><a href="#dresscode" class="navbar__overlay-link">Дресс-код</a></li>
+      <li><a href="#faq" class="navbar__overlay-link">FAQ</a></li>
+      <li><a href="#rsvp" class="navbar__overlay-link">RSVP</a></li>
+    </ul>
+  </div>
 
   <!-- ══════════════════════════════
        SECTION 1 — HERO
@@ -76,6 +124,29 @@
       { threshold: 0.15 }
     );
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Navbar — scroll state
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Navbar — mobile toggle
+    const navToggle = document.getElementById('navToggle');
+    const navOverlay = document.getElementById('navOverlay');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navOverlay.classList.toggle('open');
+      document.body.style.overflow = navOverlay.classList.contains('open') ? 'hidden' : '';
+    });
+
+    document.querySelectorAll('.navbar__overlay-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
   </script>
 
 </body>

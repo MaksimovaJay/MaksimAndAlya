@@ -1,0 +1,268 @@
+/* ════════════════════════════════════════
+   NAVBAR — ЭЛЬФИЙСКАЯ НАВИГАЦИЯ
+════════════════════════════════════════ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(44, 36, 24, 0.88);
+  transition: background 0.4s ease;
+}
+
+/* ── После скролла — чуть темнее ── */
+.navbar.scrolled {
+  background: rgba(34, 27, 18, 0.96);
+}
+
+/* ── Нижняя золотая линия ── */
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(176, 138, 74, 0.35), transparent);
+  transition: background 0.5s ease;
+}
+
+.navbar.scrolled::after {
+  background: linear-gradient(90deg, transparent, rgba(176, 138, 74, 0.6), transparent);
+}
+
+/* ── Внутренний контейнер ── */
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px clamp(24px, 5vw, 64px);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ── Логотип — слева ── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__logo img {
+  width: 38px;
+  filter: drop-shadow(0 0 0px rgba(176, 138, 74, 0));
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.navbar.scrolled .navbar__logo img {
+  width: 32px;
+  filter: drop-shadow(0 0 8px rgba(176, 138, 74, 0.45));
+}
+
+.navbar__logo:hover img {
+  filter: drop-shadow(0 0 14px rgba(176, 138, 74, 0.65));
+  transform: scale(1.05);
+}
+
+/* ── Навигация — центр ── */
+.navbar__nav {
+  display: flex;
+  list-style: none;
+  gap: clamp(18px, 2.8vw, 44px);
+  align-items: center;
+}
+
+.navbar__link {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(11px, 1.1vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(231, 217, 190, 0.7);
+  position: relative;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Underline — рисуется слева направо */
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  box-shadow: 0 0 6px var(--glow-gold);
+  transition: width 0.35s ease;
+}
+
+.navbar__link:hover {
+  color: var(--gold);
+  text-shadow: 0 0 10px var(--glow-gold);
+}
+
+.navbar__link:hover::after {
+  width: 100%;
+}
+
+/* Активный пункт — ✦ ТЕКСТ ✦ */
+.navbar__link.active {
+  color: var(--gold);
+}
+
+.navbar__link.active::before {
+  content: '✦ ';
+  font-size: 0.55em;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+
+.navbar__link.active::after {
+  width: 100%;
+}
+
+/* RSVP — выделен рамкой */
+.navbar__link--accent {
+  color: var(--gold);
+  border: 1px solid rgba(176, 138, 74, 0.35);
+  padding: 5px 16px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar__link--accent::after {
+  display: none;
+}
+
+.navbar__link--accent:hover {
+  background: rgba(176, 138, 74, 0.12);
+  border-color: rgba(176, 138, 74, 0.65);
+  box-shadow: 0 0 18px var(--glow-gold);
+}
+
+/* ── Правый блок ── */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+/* Монограмма */
+.navbar__monogram {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: rgba(176, 138, 74, 0.75);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.navbar__monogram:hover {
+  color: var(--gold);
+  text-shadow: 0 0 10px var(--glow-gold);
+}
+
+.navbar__mono-amp {
+  font-family: 'Ringbearer', serif;
+  font-size: 0.8em;
+  color: var(--gold);
+}
+
+/* ── Mobile toggle (три линии) ── */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 110;
+}
+
+.navbar__toggle span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--gold);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar__toggle.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.navbar__toggle.open span:nth-child(2) { opacity: 0; }
+.navbar__toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+/* ════ MOBILE ════ */
+@media (max-width: 768px) {
+  .navbar__nav     { display: none; }
+  .navbar__monogram { display: none; }
+  .navbar__toggle  { display: flex; }
+}
+
+/* ── Мобайл дропдаун — компактная панель справа ── */
+.navbar__overlay {
+  display: none;
+  position: fixed;
+  top: 62px;
+  right: 16px;
+  width: 220px;
+  background: rgba(34, 27, 18, 0.97);
+  border: 1px solid rgba(176, 138, 74, 0.25);
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 16px var(--glow-forest);
+  z-index: 99;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.navbar__overlay.open {
+  display: flex;
+}
+
+/* Тонкая золотая линия сверху */
+.navbar__overlay::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(176, 138, 74, 0.5), transparent);
+}
+
+.navbar__overlay-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+}
+
+.navbar__overlay-nav li {
+  border-bottom: 1px solid rgba(176, 138, 74, 0.08);
+}
+
+.navbar__overlay-nav li:last-child {
+  border-bottom: none;
+}
+
+.navbar__overlay-link {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(215, 201, 164, 0.8);
+  padding: 12px 20px;
+  transition: color 0.25s ease, background 0.25s ease, text-shadow 0.25s ease;
+}
+
+.navbar__overlay-link:hover {
+  color: var(--gold);
+  background: rgba(176, 138, 74, 0.08);
+  text-shadow: 0 0 10px var(--glow-gold);
+}
