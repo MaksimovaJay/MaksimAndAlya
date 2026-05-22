@@ -1,0 +1,178 @@
+/* ════════════════════════════════════════
+   SECTION 1 — HERO / ОБЛОЖКА
+════════════════════════════════════════ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('image/section_1/background_for_the_dekstop_version.png');
+  background-size: cover;
+  background-position: center top;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('image/section_1/background_for_the_mobile_version.png');
+    background-position: center center;
+  }
+}
+
+/* ── Кольцо в фоне ── */
+.hero__ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(380px, 60vw, 620px);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.055;
+}
+
+@media (max-width: 768px) {
+  .hero__ring { display: none; }
+}
+
+.hero__ring img {
+  width: 100%;
+  animation: ringRotate 100s linear infinite;
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Контейнер ── */
+.hero__inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 60px 32px 72px clamp(80px, 16vw, 260px);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero__inner {
+    align-items: center;
+    padding: 60px 28px 72px;
+  }
+}
+
+/* ── Карточка ── */
+.hero__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 520px;
+  width: 100%;
+}
+
+/* ── Герб ── */
+.hero__emblem img {
+  width: clamp(100px, 14vw, 160px);
+  filter: drop-shadow(0 3px 12px rgba(155, 132, 81, 0.3));
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .hero__emblem { display: none; }
+}
+
+/* ── "МЫ ЖЕНИМСЯ!" ── */
+.hero__headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(30px, 7.5vw, 52px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brown);
+  line-height: 1;
+  margin: 0 0 6px;
+}
+
+
+/* ── Орнаментальная линия ── */
+.hero__divider-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2px 0;
+}
+
+.hero__divider-img img {
+  width: clamp(140px, 45%, 260px);
+  opacity: 0.6;
+}
+
+/* ── Текст приглашения ── */
+.hero__invite {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(18px, 3.8vw, 24px);
+  line-height: 1.5;
+  color: var(--brown);
+  margin: 2px 0;
+  letter-spacing: 0.02em;
+}
+
+/* ── Маленький орнамент ── */
+.hero__ornament {
+  display: block;
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 0.4em;
+  margin: 2px 0;
+  opacity: 0.75;
+}
+
+/* ── Имена ── */
+.hero__names {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(28px, 6.5vw, 46px);
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  color: var(--brown);
+  margin: 0 0 2px;
+}
+
+.hero__amp {
+  font-family: 'Ringbearer', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.55em;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+/* ── Дата ── */
+.hero__date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(13px, 3vw, 17px);
+  letter-spacing: 0.3em;
+  color: var(--brown);
+  margin: 2px 0 1px;
+}
+
+/* ── Подпись ── */
+.hero__sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(16px, 3.2vw, 20px);
+  letter-spacing: 0.15em;
+  color: var(--brown);
+  margin: 0;
+}
+

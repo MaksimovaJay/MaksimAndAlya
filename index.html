@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Максим & Аля — 16.08.2026</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="section1.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       SECTION 1 — HERO
+  ══════════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <!-- Вращающееся кольцо (фон) -->
+    <div class="hero__ring" aria-hidden="true">
+      <img src="image/section_1/circle_inscription_with_ring.png" alt="" />
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__card fade-in">
+
+        <!-- Герб -->
+        <div class="hero__emblem" aria-hidden="true">
+          <img src="image/section_1/logoUp.png" alt="" />
+        </div>
+
+        <!-- Заголовок -->
+        <h2 class="hero__headline">МЫ ЖЕНИМСЯ!</h2>
+
+        <!-- Линия -->
+        <div class="hero__divider-img" aria-hidden="true">
+          <img src="image/section_1/line.png" alt="" />
+        </div>
+
+        <!-- Приглашение -->
+        <p class="hero__invite">
+          И приглашаем вас разделить<br>
+          с нами этот важный день
+        </p>
+
+        <!-- Маленький орнамент -->
+        <span class="hero__ornament">✦</span>
+
+        <!-- Имена -->
+        <h1 class="hero__names">Максим <span class="hero__amp">&amp;</span> Аля</h1>
+
+        <!-- Линия -->
+        <div class="hero__divider-img" aria-hidden="true">
+          <img src="image/section_1/line.png" alt="" />
+        </div>
+
+        <!-- Дата и подпись -->
+        <p class="hero__date">16 · 08 · 2026</p>
+        <p class="hero__sub">Средиземье, зовёт</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+    // Scroll animations
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
