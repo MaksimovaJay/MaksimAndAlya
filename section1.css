@@ -17,7 +17,7 @@
 @media (max-width: 768px) {
   .hero {
     background-image: url('image/section_1/background_for_the_mobile_version.png');
-    background-position: center center;
+    background-position: 20% top;
   }
 }
 
@@ -56,14 +56,14 @@
   align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
-  padding: 60px 32px 72px clamp(80px, 16vw, 260px);
+  padding: clamp(100px, 20vh, 180px) clamp(80px, 16vw, 260px) 60px;
   width: 100%;
 }
 
 @media (max-width: 768px) {
   .hero__inner {
     align-items: center;
-    padding: 60px 28px 72px;
+    padding: clamp(100px, 20vh, 180px) 28px 60px;
   }
 }
 
@@ -159,7 +159,7 @@
 /* ── Дата ── */
 .hero__date {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(13px, 3vw, 17px);
+  font-size: clamp(17px, 4vw, 22px);
   letter-spacing: 0.3em;
   color: var(--brown);
   margin: 2px 0 1px;
