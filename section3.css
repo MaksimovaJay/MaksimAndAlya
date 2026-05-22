@@ -1,0 +1,121 @@
+/* ════════════════════════════════════════
+   SECTION 3 — МЕСТО ПРОВЕДЕНИЯ
+════════════════════════════════════════ */
+
+.venue {
+  position: relative;
+  background-image: url('image/section_3/background_for_the_dekstop_version3.png');
+  background-size: cover;
+  background-position: center top;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .venue {
+    background-image: url('image/section_3/background_for_the_mobile_version3.png');
+    min-height: 100svh;
+  }
+}
+
+/* ── Контейнер — растягивается, чтобы занять весь фон ── */
+.venue__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 560px;
+  padding: 64px 24px 80px;
+}
+
+@media (max-width: 768px) {
+  .venue__inner {
+    padding: 52px 24px 64px;
+  }
+}
+
+/* ── Верхний блок: заголовок ── */
+.venue__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.venue__label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.85;
+}
+
+.venue__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 7vw, 54px);
+  font-weight: 700;
+  color: var(--brown);
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  margin: 0;
+  text-align: center;
+}
+
+.venue__divider {
+  width: clamp(100px, 35%, 200px);
+  opacity: 0.55;
+}
+
+/* ── Нижний блок: адрес + кнопка ── */
+.venue__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.venue__address {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(17px, 3.5vw, 22px);
+  font-weight: 500;
+  color: var(--brown);
+  line-height: 1.65;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ── Кнопка маршрута ── */
+.venue__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--forest);
+  color: var(--parchment);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid rgba(176, 138, 74, 0.3);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.venue__btn:hover {
+  background: var(--forest2);
+  border-color: rgba(176, 138, 74, 0.65);
+  box-shadow: 0 0 18px var(--glow-gold);
+}
+
+.venue__btn svg {
+  flex-shrink: 0;
+  opacity: 0.85;
+}

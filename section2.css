@@ -1,0 +1,108 @@
+/* ════════════════════════════════════════
+   SECTION 2 — УЗНАЛИ?
+════════════════════════════════════════ */
+
+.recognition {
+  position: relative;
+  background-image: url('image/section_2/background_for_the_dekstop_version2.png');
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 180px 20px 200px;
+}
+
+@media (max-width: 768px) {
+  .recognition {
+    background-image: url('image/section_2/background_for_the_mobile_version2.png');
+    padding: 60px 20px 80px;
+  }
+}
+
+/* ── Контейнер ── */
+.recognition__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  gap: 60px;
+}
+
+@media (max-width: 768px) {
+  .recognition__inner {
+    flex-direction: column;
+    max-width: 480px;
+    gap: 32px;
+  }
+}
+
+/* ── Текст ── */
+.recognition__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  order: 2;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .recognition__text {
+    order: 1;
+    flex: unset;
+  }
+}
+
+.recognition__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 7vw, 54px);
+  font-weight: 700;
+  color: var(--brown);
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.recognition__divider {
+  width: clamp(120px, 40%, 220px);
+  opacity: 0.55;
+}
+
+.recognition__body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 3.2vw, 22px);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--brown-dark);
+  text-align: center;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Фото ── */
+.recognition__photo {
+  display: flex;
+  justify-content: center;
+  order: 1;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .recognition__photo {
+    order: 2;
+  }
+}
+
+.recognition__photo img {
+  display: block;
+  width: 460px;
+  max-width: calc(100% - 40px);
+}
+
+@media (max-width: 768px) {
+  .recognition__photo img {
+    width: 300px;
+  }
+}
