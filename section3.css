@@ -80,8 +80,7 @@
 
 @media (max-width: 768px) {
   .venue__weg {
-    display: block;
-    width: min(340px, 85vw);
+    display: none;
   }
 }
 
