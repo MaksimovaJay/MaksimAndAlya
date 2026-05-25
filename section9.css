@@ -1,0 +1,121 @@
+/* ════════════════════════════════════════
+   SECTION 9 — RSVP / БУДЕМ ВАС ЖДАТЬ
+════════════════════════════════════════ */
+
+.rsvp {
+  position: relative;
+  background-image: url('image/section_9/background_for_the_dekstop_version9.png');
+  background-size: cover;
+  background-position: center top;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px 100px;
+}
+
+@media (max-width: 768px) {
+  .rsvp {
+    background-image: url('image/section_9/background_for_the_mobile_version9.png');
+  }
+}
+
+/* ── Контейнер ── */
+.rsvp__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  gap: 20px;
+  text-align: center;
+}
+
+/* ── Заголовок ── */
+.rsvp__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 8vw, 52px);
+  font-weight: 700;
+  color: var(--brown);
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.rsvp__divider {
+  width: clamp(100px, 35%, 200px);
+  opacity: 0.55;
+}
+
+/* ── Текст ── */
+.rsvp__text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(17px, 3.5vw, 21px);
+  font-weight: 500;
+  color: var(--brown-dark);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Поле ввода ── */
+.rsvp__input {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(231, 217, 190, 0.5);
+  border: 1px solid rgba(138, 106, 59, 0.35);
+  border-radius: 6px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: var(--brown);
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.rsvp__input::placeholder {
+  color: rgba(59, 48, 34, 0.45);
+}
+
+.rsvp__input:focus {
+  border-color: rgba(138, 106, 59, 0.65);
+  background: rgba(231, 217, 190, 0.7);
+}
+
+/* ── Кнопка WhatsApp ── */
+.rsvp__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 24px;
+  background: #25d366;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.rsvp__btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-1px);
+}
+
+.rsvp__btn svg {
+  flex-shrink: 0;
+}
+
+/* ── Дедлайн ── */
+.rsvp__deadline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(14px, 3vw, 16px);
+  font-style: italic;
+  color: var(--text-sec);
+  letter-spacing: 0.06em;
+  margin: 0;
+}

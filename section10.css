@@ -1,0 +1,122 @@
+/* ════════════════════════════════════════
+   SECTION 10 — ЗАКРЫВАЮЩАЯ + ФУТЕР
+════════════════════════════════════════ */
+
+.closing {
+  position: relative;
+  background-image: url('image/section_10/background_for_the_dekstop_version9.png');
+  background-size: cover;
+  background-position: center top;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .closing {
+    background-image: url('image/section_10/background_for_the_mobile_version9.png');
+  }
+}
+
+/* ── Текст поверх фото ── */
+.closing__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.closing__text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 5vw, 36px);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--parchment);
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.closing__heart {
+  font-size: 24px;
+  color: var(--parchment);
+  opacity: 0.75;
+  line-height: 1;
+}
+
+/* ════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════ */
+
+.site-footer {
+  background: var(--forest);
+  padding: 48px 24px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  border-top: 1px solid rgba(176, 138, 74, 0.15);
+}
+
+/* ── Навигация ── */
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+
+.footer__link {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(231, 217, 190, 0.55);
+  transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+  color: var(--gold);
+}
+
+/* ── Логотип ── */
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__logo-wrap::before,
+.footer__logo-wrap::after {
+  content: '✦';
+  font-size: 10px;
+  color: rgba(176, 138, 74, 0.4);
+  letter-spacing: 0.2em;
+}
+
+.footer__logo img {
+  width: 40px;
+  opacity: 0.7;
+  filter: drop-shadow(0 0 8px rgba(176, 138, 74, 0.3));
+}
+
+.footer__copy {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: rgba(231, 217, 190, 0.25);
+}

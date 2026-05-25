@@ -137,6 +137,34 @@ body {
   50%       { opacity: 0.8; transform: translateY(4px); }
 }
 
+/* ── BACK TO TOP ── */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 20px;
+  z-index: 200;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(44, 36, 24, 0.88);
+  border: 1px solid rgba(176, 138, 74, 0.35);
+  border-radius: 50%;
+  color: var(--gold);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  box-shadow: 0 0 14px var(--glow-gold);
+}
+
 /* ── BUTTONS ── */
 .btn {
   display: inline-flex;
