@@ -16,7 +16,7 @@
 @media (max-width: 768px) {
   .gifts {
     background-image: url('image/section_8/background_for_the_mobile_version8.png');
-    min-height: 100svh;
+    min-height: 120svh;
   }
 }
 

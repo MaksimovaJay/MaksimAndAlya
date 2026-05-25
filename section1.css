@@ -81,6 +81,12 @@
   }
 }
 
+@media (min-width: 375px) and (max-width: 430px) {
+  .hero__card {
+    margin-top: 52svh;
+  }
+}
+
 /* ── Карточка ── */
 .hero__card {
   display: flex;
