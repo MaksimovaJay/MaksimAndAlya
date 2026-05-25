@@ -17,8 +17,14 @@
 @media (max-width: 768px) {
   .hero {
     background-image: url('image/section_1/background_for_the_mobile_version.png');
-    background-position: 20% top;
-    height: calc(100svh - 62px);
+    background-position: center top;
+    height: calc(120svh - 62px);
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    background-image: url('image/section_1/background_for_the_mobile320_version.png');
   }
 }
 
@@ -63,7 +69,7 @@
 
 @media (max-width: 768px) {
   .hero__inner {
-    height: calc(100svh - 62px);
+    height: calc(120svh - 62px);
     min-height: 0;
     padding: 0 20px;
     align-items: center;
