@@ -14,12 +14,6 @@
   padding: 80px 24px;
 }
 
-@media (max-width: 768px) {
-  .invitation {
-    background-image: url('image/section_1.2/background_for_the_mobile_version1.2.png');
-  }
-}
-
 /* ── Контейнер ── */
 .invitation__inner {
   display: flex;
