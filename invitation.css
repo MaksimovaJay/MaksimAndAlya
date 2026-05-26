@@ -1,0 +1,80 @@
+/* ════════════════════════════════════════
+   INVITATION — ПРИГЛАСИТЕЛЬНАЯ СЕКЦИЯ
+════════════════════════════════════════ */
+
+.invitation {
+  position: relative;
+  background-image: url('image/section_1.2/background_for_the_dekstop_version1.2.png');
+  background-size: cover;
+  background-position: center top;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px;
+}
+
+@media (max-width: 768px) {
+  .invitation {
+    background-image: url('image/section_1.2/background_for_the_mobile_version1.2.png');
+  }
+}
+
+/* ── Контейнер ── */
+.invitation__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 540px;
+  width: 100%;
+  gap: 20px;
+}
+
+/* ── "Дорогие и любимые!" ── */
+.invitation__greeting {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 6vw, 44px);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--brown);
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* ── Разделитель ── */
+.invitation__divider {
+  width: clamp(100px, 40%, 220px);
+  opacity: 0.5;
+}
+
+/* ── Основной текст ── */
+.invitation__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.invitation__body p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 3.5vw, 24px);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--brown-dark);
+  line-height: 1.75;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ── Подпись ── */
+.invitation__sign {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 3.5vw, 22px);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--brown);
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
